@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black-background: #0b0d17;
+  --white-text: #fff;
+  --font-family-bellefair: "Bellefair", serif;
+  --font-family-barlow: "Barlow", sans-serif;
+  --font-family-barlow-condensed: "Barlow Condensed", sans-serif;
+}
+
+body {
+  background: var(--black-background);
+  min-height: 100vh;
+}
+
+header {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.menu {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu a {
+  color: var(--white-text);
+}
+
+.second-heading {
+  border: 3px solid yellow;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.second-heading span {
+  border: 2px solid blue;
+  font-family: var(--font-family-barlow-condensed);
+  opacity: 0.25;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 19.2px;
+  letter-spacing: 2.7px;
+}
+
+.second-heading p {
+  font-family: var(--font-family-barlow-condensed);
+  font-weight: normal;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  line-height: 19px;
+}
+
+.image-container {
+  border: 3px solid cyan;
+  margin-bottom: 2.125rem;
+}
+
+.launch-vehicle-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.number-links {
+  border: 2px solid red;
+  margin-bottom: 37px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--white-text);
+  border: 1px solid var(--white-text);
+  border-radius: 50%;
+  font-size: 1rem;
+  font-family: var(--font-family-bellefair);
+  padding: 0.687rem 1rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.link:hover {
+  color: #0b0d17;
+  background: white;
+}
+
+.secondary-text {
+  border: 3px solid purple;
+  font-family: var(--font-family-barlow-condensed);
+  color: #d0d6f9 !important;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.875rem /* 14px*/;
+  line-height: 16.8px;
+  letter-spacing: 2.3625px;
+  font-weight: normal;
+  margin-bottom: 9px;
+}
+
+.main-heading {
+  border: 3px solid goldenrod;
+  color: var(--white-text);
+  margin-bottom: 16px;
+  font-family: var(--font-family-bellefair);
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 28px;
+  text-align: center;
+}
+
+.main-text {
+  border: 2px solid limegreen;
+  font-family: var(--font-family-bellefair);
+  font-weight: normal;
+  text-align: center;
+  font-size: 0.9375rem /* 15px */;
+  line-height: 25px;
+  margin: 0 1.5rem; /* 24px */
+  color: rgb(208, 214, 249) !important;
+}
+
+.main-text .first-line {
+  font-weight: normal;
+  display: block;
+}
