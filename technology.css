@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black-background: #0b0d17;
+  --white-text: #fff;
+  --font-family-bellefair: "Bellefair", serif;
+  --font-family-barlow: "Barlow", sans-serif;
+  --font-family-barlow-condensed: "Barlow Condensed", sans-serif;
+}
+
+body {
+  background: url(./assets/technology/background-technology-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--black-background);
+  min-height: 100vh;
+}
+
+header {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu .num {
+  color: #0b0d17;
+  opacity: 0;
+}
+
+.menu a {
+  color: var(--white-text);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: var(--font-family-barlow-condensed);
+  font-size: 14px; /*0.875rem */
+  line-height: 1.05rem; /*16.8px */
+  letter-spacing: 2.7px;
+}
+
+.second-heading {
+  border: 3px solid yellow;
+  color: var(--white-text);
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.second-heading span {
+  border: 2px solid blue;
+  font-family: var(--font-family-barlow-condensed);
+  opacity: 0.25;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 19.2px;
+  letter-spacing: 2.7px;
+}
+
+.second-heading p {
+  font-family: var(--font-family-barlow-condensed);
+  font-weight: normal;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  line-height: 19px;
+}
+
+.image-container {
+  border: 3px solid cyan;
+  margin-bottom: 2.125rem;
+}
+
+.launch-vehicle-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.number-links {
+  border: 2px solid red;
+  margin-bottom: 37px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--white-text);
+  border: 1px solid var(--white-text);
+  border-radius: 50%;
+  font-size: 1rem;
+  font-family: var(--font-family-bellefair);
+  padding: 0.687rem 1rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.link:hover {
+  color: #0b0d17;
+  background: white;
+}
+
+.secondary-text {
+  border: 3px solid purple;
+  font-family: var(--font-family-barlow-condensed);
+  color: #d0d6f9;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.875rem /* 14px*/;
+  line-height: 16.8px;
+  letter-spacing: 2.3625px;
+  font-weight: normal;
+  margin-bottom: 9px;
+}
+
+.main-heading {
+  border: 3px solid goldenrod;
+  color: var(--white-text);
+  margin-bottom: 16px;
+  font-family: var(--font-family-bellefair);
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 28px;
+  text-align: center;
+}
+
+.main-text {
+  border: 2px solid limegreen;
+  font-family: var(--font-family-barlow);
+  font-weight: normal;
+  text-align: center;
+  font-size: 0.9375rem /* 15px */;
+  line-height: 25px;
+  margin: 0 1.5rem 5.0625rem; /* 0 24px 81px*/
+  color: #d0d6f9;
+}
+
+.main-text .first-line {
+  font-weight: normal;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background: url(./assets/technology/background-technology-tablet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--black-background);
+  }
+
+  .logo {
+    border: 2px solid yellow;
+    margin: 1.5rem 0 0 2.4375rem; /*24px 0 0 39px */
+    width: 48px;
+    height: 48px;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    padding: 2.437rem 2.875rem 2.437rem 3rem; /*39px 46px 39px 48px */
+    gap: 2.3125rem; /* 37px */
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .menu a {
+    letter-spacing: 2.3625px;
+  }
+
+  .menu .num {
+    color: #0b0d17;
+    opacity: 0;
+  }
+
+  header {
+    padding: 0;
+  }
+
+  .second-heading {
+    display: flex;
+    justify-content: flex-start;
+    margin: 2.5rem 0 3.75rem 2.40625rem; /* 40px 0 60px 38.5px*/
+  }
+
+  .image-container {
+    border: 3px solid cyan;
+    margin-bottom: 3.5rem; /* 56px */
+  }
+
+  .number-links {
+    margin-bottom: 2.75rem; /*44px*/
+  }
+
+  .link.one,
+  .link.two {
+    padding: 1rem 1.531rem; /* 16px 24.5px*/
+  }
+
+  .link.three {
+    padding: 0.9375rem 1.468rem; /*15px 23.5px */
+  }
+
+  .secondary-text {
+    font-size: 1rem /* 16px*/;
+    line-height: 19.2px;
+    letter-spacing: 2.7px;
+    margin-bottom: 1rem; /* 16px*/
+  }
+
+  .main-heading {
+    font-size: 2.5rem; /* 40px */
+    line-height: 45.84px;
+  }
+
+  .main-text {
+    margin: 0 9.687rem 6.0625rem; /*0 155px 97px*/
+    font-size: 1rem;
+    line-height: 28px;
+  }
+
+  .main-text .first-line {
+    font-weight: normal;
+    display: inline;
+  }
+}
