@@ -494,19 +494,16 @@ header {
 
   .container {
     justify-self: center;
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
     width: 637px;
     margin-top: 137px;
     margin-left: 165px;
     grid-row: 2;
   }
-
-  .container {
-    display: flex;
-    gap: 80px;
-    align-items: flex-start;
-  }
-
-  .second-heading {
+  
+   .second-heading {
     grid-column: 1 / -1;
     margin: 0 0 1.625rem 10.40625rem; /*0 0 26px 166.5px*/
     --fs-500: 1.75rem; /*28px*/
@@ -555,3 +552,7 @@ header {
     display: inline;
   }
 }
+
+
+
+ 
