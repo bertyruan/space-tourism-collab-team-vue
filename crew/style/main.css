@@ -1,0 +1,136 @@
+/* ------------------------------------------------------
+-------------------number title---------------------------
+------------------------------------------------------ */
+
+.title__number {
+    text-transform: uppercase;
+  }
+  
+   .title__number span {
+    margin-right: 0.5em;
+    font-weight: 700;
+    color: hsl(var(--clr-white) / 0.25);
+  }
+  
+  /*------------------------------------------------------
+  ----------------- Compontents - ---------------------
+  -----------------------------------------------------*/
+  
+  .dot-indicators > * {
+    cursor: pointer;
+    border: 0;
+    border-radius: 50%;
+    background-color: hsl(var(--clr-white) / 0.25);
+    padding: 0.5em;
+    /*0,5em*/
+    margin-top:1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .dot-indicators > *:hover,
+  .dot-indicators > *:focus {
+    background-color: hsl(var(--clr-white) / 0.5);
+  }
+  
+  .dot-indicators > [aria-selected="true"] {
+    background-color: hsl(var(--clr-white) / 1);
+  }
+  
+  /*------------------------------------------------
+  ---------------Mobile view------------------------
+  -----------------------------------------------*/
+  
+  @media( max-width:34rem){
+    .dot-indicators{
+      justify-content: center;
+      align-items: center;
+    }
+  
+   .image{
+     width: 100%;
+     margin-inline: auto;
+     }
+  
+  .line{
+   border-bottom: 1px solid hsl( var(--clr-white)/ 0.25);
+   width:100%;
+  }
+  }
+  
+  .title__number{
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+    padding-inline: 0;
+    letter-spacing: 2,35px;
+  }
+  
+  .describe * + *{
+    margin-top: 1rem;
+  }
+  
+  @media (max-width:34rem){
+  .title__number-one,span{
+    font-size: var(--fs-300);
+    font-family: var(--ff-cond);
+  }
+  .heading-one{
+    font-size: var(--fs-300);
+    font-family:var(--ff-belle)
+  }
+  .heading-two{
+    font-size: var(--fs-400);
+    font-family:var(--ff-belle) ;
+  }
+  .text{
+   font-size: var(--fs-200);
+   font-family: var(--ff-normal);
+  
+  padding-bottom: 1rem;
+  margin-bottom:1rem;
+  
+  }
+  }
+  
+  @media (max-width: 44rem){
+    
+  .title__number-one{
+    text-align: center;
+  }
+    .heading-one{
+        text-align: center;
+    }
+    .heading-two{
+      text-align: center;
+    }
+  .text{
+    text-align: center;
+  }
+  }
+  /*-----------------------------------------
+  
+  -----background image--------------------
+  ------------------------------------*/
+  body{
+    background-image: url("/assets/crew/background-crew-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    
+  }
+  
+  @media (min-width:35rem)
+  {
+    body{
+      background-image: url("/assets/crew/background-crew-tablet.jpg");
+    }
+  }
+  
+  @media (min-width:45rem)
+  {
+    body{
+      background-image: url("/assets/crew/background-crew-desktop.jpg");
+     
+    }
+  }
+  
+  /* need to make background better*/
