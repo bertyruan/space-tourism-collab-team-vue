@@ -1,0 +1,558 @@
+/* ----------Custom properties-------------   */
+:root {
+  --clr-dark: 230 35% 7%;
+  --clr-light: 231 77% 90%;
+  --clr-white: 0 0% 100%;
+
+  /* font-sizes */
+  --fs-900: 9.375rem; /*150px*/
+  --fs-800: 6.25rem; /*100px*/
+  --fs-700: 3.5rem; /*56px*/
+  --fs-600: 2rem; /*32px*/
+  --fs-500: 1.75rem; /*28px*/
+  --fs-400: 1.5rem; /*24px*/
+  --fs-300: 1.125rem; /*18px */
+  --fs-200: 1rem; /*16px */
+  --fs-150: 0.9375rem; /* 15px */
+  --fs-100: 0.875rem; /*14px */
+
+  /* font-families */
+  --ff-belle: "Bellefair", serif;
+  --ff-cond: "Barlow Condensed", sans-serif;
+  --ff-normal: "Barlow", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+img {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+/*--------------------Responsive/fluid image-----------------------------*/
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/*-----------------------------Font with diffrent elements------------------------------------*/
+input,
+button,
+textarea,
+select {
+  font: inherit; /* like this applying same as main we put*/
+}
+
+/* -----------------------------------------Utility classes---------------------------------------------  */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  /*
+  padding-inline: 2em;  left and right side when we use inline instead of writing padding left or padding right
+  margin-inline: auto;
+  max-width: 80rem; 1280px*/
+
+  grid-row: 2;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+} /* this will show up just to screen reader not to users */
+
+/* colors */
+
+.bg-dark {
+  background-color: hsl(var(--clr-dark));
+}
+.bg-light {
+  background-color: hsl(var(--clr-light));
+}
+.bg-white {
+  background-color: hsl(var(--clr-white));
+}
+
+.text-dark {
+  color: hsl(var(--clr-dark));
+}
+.text-light {
+  color: hsl(var(--clr-light));
+}
+.text-white {
+  color: hsl(var(--clr-white));
+}
+
+/* typography */
+
+.ff-belle {
+  font-family: var(--ff-belle);
+}
+.ff-cond {
+  font-family: var(--ff-sans-cond);
+}
+.ff-normal {
+  font-family: var(--ff-normal);
+}
+
+.letter-spacing-1 {
+  letter-spacing: 4.75px;
+}
+.letter-spacing-2 {
+  letter-spacing: 2.7px;
+}
+.letter-spacing-3 {
+  letter-spacing: 2.35px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+} /*if you want to use it directly in the class*/
+
+.fs-900 {
+  font-size: var(--fs-900);
+}
+.fs-800 {
+  font-size: var(--fs-800);
+}
+.fs-700 {
+  font-size: var(--fs-700);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+  line-height: 1.1;
+}
+/* -------------------body set up--------------------------*/
+body {
+  background: url("../assets/technology/background-technology-mobile.jpg");
+  background-color: hsl(var(--clr-dark));
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid black;
+  min-height: 100vh;
+  color: hsl(var(--clr-white));
+  font-size: var(--fs-400);
+  font-family: var(--ff-normal);
+  line-height: 1.5;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1.5rem; /* 24px */
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /*32px*/
+}
+
+.menu a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: var(--ff-cond);
+  font-weight: 400;
+  font-size: var(--fs-200);
+  line-height: 19.2px;
+  letter-spacing: 2.7px;
+  color: hsl(var(--clr-white));
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.menu a .num {
+  font-weight: 700;
+}
+
+.second-heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  font-family: var(--ff-cond);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: var(--fs-200);
+  line-height: 19.2px;
+  letter-spacing: 2.7px;
+  margin-bottom: 2rem; /* 32px */
+}
+
+.second-heading span {
+  font-weight: 700;
+  opacity: 0.25;
+}
+
+.image-container {
+  margin-bottom: 2.125rem; /*34px */
+  height: 170px;
+  background: url(../assets/technology/image-launch-vehicle-landscape.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#capsule-image {
+  background: url("../assets/technology/image-space-capsule-landscape.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#space-port-image {
+  background: url("../assets/technology/image-spaceport-landscape.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.number-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.625rem; /*26px */
+}
+
+.number-links .link {
+  text-decoration: none;
+  color: hsl(var(--clr-white));
+  border: 1px solid hsl(var(--clr-white));
+  border-radius: 50%;
+  font-family: var(--ff-belle);
+  font-size: var(--fs-200); /* 16px */
+  padding: 0.6875rem 1rem 0.6875rem 1rem; /* 11px 16px 11px 16px*/
+  line-height: 18.34px;
+}
+
+.secondary-text {
+  text-transform: uppercase;
+  font-family: var(--ff-cond);
+  font-size: var(--fs-100); /*14px */
+  font-weight: 400;
+  line-height: 16.8px;
+  letter-spacing: 2.36px;
+  color: hsl(231, 90%, 88%);
+  text-align: center;
+  margin-bottom: 0.5625rem; /* 9px */
+}
+
+.main-heading {
+  font-family: var(--ff-belle);
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: var(--fs-400); /* 24px */
+  line-height: 27.5px;
+  margin-bottom: 1rem; /* 16px */
+}
+
+.main-text {
+  margin: 0 1.5rem 3.5rem 1.5rem; /* 0 24px 56px 24px*/
+  color: #d0d6f9;
+  font-family: var(--ff-normal);
+  font-weight: 400;
+  font-size: var(--fs-150); /* 15px */
+  text-align: center;
+  line-height: 1.5625rem; /*25px */
+}
+
+.main-text strong {
+  display: block;
+  font-weight: 400;
+}
+
+/* -------------------------------***accesibility *** remove animations for people who've turned them off---------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background: url("../assets/technology/background-technology-tablet.jpg");
+    background-color: hsl(var(--clr-dark));
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  header {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  .logo {
+    height: 48px;
+    width: 48px;
+    margin: 24px 0 0 39px;
+  }
+
+  .menu {
+    padding: 2.4375rem 2.875rem 2.4375rem 3rem; /*39px 46px 39px 48px*/
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2.3125rem; /*37px*/
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .menu a {
+    text-decoration: none;
+    font-family: var(--ff-cond);
+    font-weight: 400;
+    font-size: var(--fs-100);
+    line-height: 16.8px;
+    letter-spacing: 2.36px;
+    color: hsl(var(--clr-white));
+    display: flex;
+    gap: 12px;
+  }
+
+  .menu a .num {
+    display: none;
+  }
+
+  .second-heading {
+    justify-content: flex-start;
+    margin: 0 0 3.75rem 2.406rem; /*0 0 60px 38.5px */
+    letter-spacing: 3.38px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .image-container {
+    height: 310px;
+    margin-bottom: 3.5rem; /*56px */
+  }
+
+  .number-links {
+    margin-bottom: 2.75rem; /*44px */
+  }
+
+  .number-links .link {
+    font-size: var(--fs-400); /* 16px */
+    line-height: 27.5px;
+    letter-spacing: 1.5px;
+  }
+
+  .link.one,
+  .link.two {
+    padding: 1rem 1.5rem; /*16px 24px*/
+  }
+
+  .link.three {
+    padding: 0.9375rem 1.4375rem;
+  }
+
+  .secondary-text {
+    font-size: var(--fs-200); /*16px */
+    line-height: 19.2px;
+    letter-spacing: 2.7px;
+    margin-bottom: 1rem; /*16px*/
+  }
+
+  .main-heading {
+    font-size: 2.5rem; /* 40px */
+    line-height: 45.84px;
+  }
+
+  .main-text {
+    margin: 0 9.68rem 6.0625rem; /*0 155px 97px*/
+    line-height: 1.75rem; /*28px */
+    font-size: var(--fs-200); /* 16px */
+  }
+
+  .main-text strong {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background: url(../assets/technology/background-technology-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  header {
+    padding: 40px 0 0 0;
+    margin-bottom: 4.75rem; /*76px*/
+  }
+
+  .menu {
+    padding: 2.4375rem 10.3125rem 2.375rem 7.6875rem; /*  39px 165px 38px 123px; */
+    gap: 3rem; /*48px*/
+  }
+
+  .menu a .num {
+    display: inline;
+  }
+
+  .logo {
+    margin-left: 55px;
+  }
+
+  main {
+    display: grid;
+    justify-content: start;
+    grid-template-columns: 1fr auto;
+    gap: 0 156px;
+  }
+
+  .image-container {
+    grid-column: 2;
+    height: 527px;
+    width: 483px;
+    margin-bottom: 3.5rem; /*56px */
+    background: url(../assets/technology/image-launch-vehicle-portrait.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  #capsule-image {
+    background: url("../assets/technology/image-space-capsule-portrait.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  #space-port-image {
+    background: url("../assets/technology/image-spaceport-portrait.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .container {
+    justify-self: center;
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+    width: 637px;
+    margin-top: 137px;
+    margin-left: 165px;
+    grid-row: 2;
+  }
+  
+   .second-heading {
+    grid-column: 1 / -1;
+    margin: 0 0 1.625rem 10.40625rem; /*0 0 26px 166.5px*/
+    --fs-500: 1.75rem; /*28px*/
+    line-height: 33.6px;
+    letter-spacing: 4.72px;
+  }
+
+  .number-links .link {
+    font-size: var(--fs-400); /* 16px */
+    line-height: 27.5px;
+    letter-spacing: 1.5px;
+  }
+
+  .number-links {
+    margin-bottom: 0;
+    gap: 2rem;
+  }
+
+  .number-links .link {
+    --fs-600: 2rem; /*32px*/
+    letter-spacing: 2px;
+    padding: 22px 35px 21px 34px;
+    line-height: 36.67px;
+  }
+
+  .secondary-text {
+    margin-bottom: 0.6875rem; /*11px*/
+    text-align: left;
+  }
+
+  .main-heading {
+    font-size: var(--fs-700);
+    line-height: 64.18px;
+    margin-bottom: 17px;
+    text-align: left;
+  }
+
+  .main-text {
+    text-align: left;
+    margin: 0 0 246px 0;
+    line-height: 2rem; /*32px*/
+    font-size: var(--fs-300);
+  }
+
+  .main-text strong {
+    display: inline;
+  }
+}
+
+
+
+ 
