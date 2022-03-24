@@ -428,7 +428,8 @@ nav {
   }
 
   header {
-    margin-bottom: 4.75rem;;
+    margin-bottom: 4.75rem;
+    padding-top: 2.5rem;
   }
 
   .line {
@@ -440,7 +441,6 @@ nav {
   }
 
   nav {
-    margin-top: 2.5rem;
     display: block;
     position: relative;
     right: 0;
