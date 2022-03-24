@@ -1,0 +1,349 @@
+/* ------------------------------------------------
+-----------Custom properties--------------------
+-----------------------------------------------   */
+
+:root {
+    --clr-dark: 230 35% 7%;
+    --clr-light: 231 77% 90%;
+    --clr-white: 0 0% 100%;
+  
+    /* font-sizes */
+    --fs-900: 9.375rem; /*150px*/
+    --fs-800: 6.25rem; /*100px*/
+    --fs-700: 3.5rem; /*56px*/
+    --fs-600: 2rem; /*32px*/
+    --fs-500: 1.75rem; /*28px*/
+    --fs-400: 1.125rem; /*18px*/
+    --fs-300: 1rem; /*16px*/
+    --fs-200: 0.875rem; /*14px*/
+  
+    /* font-families */
+    --ff-belle: "Bellefair", serif;
+    --ff-cond: "Barlow Condensed", sans-serif;
+    --ff-normal: "Barlow", sans-serif;
+  }
+  
+  /*-----Border box----*/
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  /*-----------------------------------------------
+  ------------------Margins ---------------------
+  ----------------------------------------------*/
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  figure,
+  img {
+    margin: 0;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    font-weight: 400;
+  }
+  /* ------------------------------------------
+  --------------------body set up------------
+  --------------------------------------------*/
+  body {
+    line-height: 1.5;
+    min-height: 100vh;
+    color: hsl (var(--clr-white));
+    background-color: hsl(var(--clr-dark));
+    display: grid;
+    grid-template-rows: min-content 1fr;
+  }
+  
+  /*----------------------------------------------------------
+  ---------------------Responsive/fluid image--------------
+  -------------------------------------------------------------*/
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /*----------------------------------------------------------
+  ------------------Font with diffrent elements--------------
+  --------------------------------------------------------------*/
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit; /* like this applying same as main we put*/
+  }
+  
+  /* ------------------------------------------------------------------------------------------------
+  --------***accesibility *** remove animations for people who've turned them off-------------
+  -------------------------------------------------------------------------------------------------- */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /* ------------------------------------------------------------------------------------
+  ----------------------------Utility classes--------------------------------------------
+  ---------------------------------------------------------------------------------------  */
+  
+  .flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+  }
+  
+  .grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+  }
+  
+  .container {
+    padding-inline: 2em; /* left and right side when we use inline instead of writing padding left or padding right*/
+    margin-inline: auto;
+    max-width: 80rem; /*1280px*/
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 2fr;
+  }
+  
+  /*--------------------------------------------------------------------------------------
+  ----------------------------------TABLET VIEW------------------------------------------
+  -----------------------------------------------------------------------------------------*/
+  @media (min-width: 35rem) {
+    .line {
+      display: none;
+    }
+    nav {
+      height: 50px;
+    }
+   .title__number-one, span{
+      font-size: var(--fs-400);
+      font-family: var(--ff-cond);
+    }
+    .heading-one {
+      font-size: var(--fs-500);
+      font-family: var(--ff-belle);
+    }
+    .heading-two {
+      font-size: var(--fs-600);
+      font-family: var(--ff-belle);
+    }
+    .text {
+      font-size: var(--fs-300);
+      font-family: var(--ff-normal);
+    }
+    .grid-container {
+      display: grid;
+      gap: var(--container-gap: 1rem);
+      grid-template-columns: repeat(5, 3rem 1fr);
+    }
+  
+    .grid-container > .title__number {
+      grid-column: 1/5;
+      grid-row: 1;
+    }
+    .grid-container > .describe {
+      grid-column: 2/-1;
+    }
+  
+    .grid-container > .dot-indicators {
+      grid-column: 2/-1;
+      grid-row: 3;
+    }
+  
+    .dot-indicators {
+      justify-content: center;
+      align-items: center;
+    }
+    .grid-container > .image {
+      grid-column: 2/-1;
+      grid-row: 4;
+    }
+  }
+  
+  /* ------------------------------------------------------------------------------------------
+  -------------------------------DESKTOP VIEW--------------------------------------------
+  ------------------------------------------------------------------------------------------*/
+  
+  @media (min-width: 45rem) {
+    .line {
+      display: none;
+    }
+    nav {
+      height: 100px;
+    } /* just to have look */
+  
+    .title__number-one, span{
+      font-size: var(--fs-500);
+      font-family: var(--ff-cond);
+    }
+    .heading-one {
+      font-size: var(--fs-600);
+      font-family: var(--ff-belle);
+    }
+    .heading-two {
+      font-size: var(--fs-700);
+      font-family: var(--ff-belle);
+    }
+    .text {
+      font-size: var(--fs-300);
+      font-family: var(--ff-normal);
+    }
+    .img {
+      width: 100%;
+    }
+    .grid-container {
+      display: grid;
+      gap: var(--container-gap, 2rem);
+      grid-template-columns: 1fr auto;
+    }
+  
+    .grid-container > .title__number {
+      grid-column: 1/ 1;
+      grid-row: 1;
+      text-align: start;
+    }
+    .grid-container > .describe {
+      grid-column: 1/ 1;
+      grid-row: 2;
+      text-align: start;
+    }
+  
+    .grid-container > .dot-indicators {
+      grid-column: 1/ 1;
+      grid-row: 3;
+    }
+  
+    .grid-container > .image {
+      grid-column: 2/-1;
+      grid-row: 1/4;
+    }
+  
+    .dot-indicators {
+      text-align: start;
+      justify-content: start;
+      align-items: start;
+    }
+  }
+  @media (max-width: 33rem;) {
+    .dot-indicators {
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+    }
+  }
+  
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  } /* this will be show up just to screen reader not to users */
+  
+  /* -------------------------------------------------------
+  -------------------------------colors ---------------------
+  ----------------------------------------------------------------*/
+  
+  .bg-dark {
+    background-color: hsl(var(--clr-dark));
+  }
+  .bg-light {
+    background-color: hsl(var(--clr-light));
+  }
+  .bg-white {
+    background-color: hsl(var(--clr-white));
+  }
+  
+  .text-dark {
+    color: hsl(var(--clr-dark));
+  }
+  .text-light {
+    color: hsl(var(--clr-light));
+  }
+  .text-white {
+    color: hsl(var(--clr-white));
+  }
+  
+  /* -------------------------------------------------------------------------
+  --------------------typography---------------------------------------------
+  -------------------------------------------------------------------------------- */
+  
+  .ff-belle {
+    font-family: var(--ff-belle);
+  }
+  .ff-cond {
+    font-family: var(--ff-sans-cond);
+  }
+  .ff-normal {
+    font-family: var(--ff-normal);
+  }
+  
+  .letter-spacing-1 {
+    letter-spacing: 4.75px;
+  }
+  .letter-spacing-2 {
+    letter-spacing: 2.7px;
+  }
+  .letter-spacing-3 {
+    letter-spacing: 2.35px;
+  }
+  
+  .uppercase {
+    text-transform: uppercase;
+  } /*if you want to use it directly in the class of some*/
+  
+  .fs-900 {
+    font-size: var(--fs-900);
+  }
+  .fs-800 {
+    font-size: var(--fs-800);
+  }
+  .fs-700 {
+    font-size: var(--fs-700);
+  }
+  .fs-600 {
+    font-size: var(--fs-600);
+  }
+  .fs-500 {
+    font-size: var(--fs-500);
+  }
+  .fs-400 {
+    font-size: var(--fs-400);
+  }
+  .fs-300 {
+    font-size: var(--fs-300);
+  }
+  .fs-200 {
+    font-size: var(--fs-200);
+  }
+  
+  .fs-900,
+  .fs-800,
+  .fs-700,
+  .fs-600 {
+    line-height: 1.1;
+  }
+  
