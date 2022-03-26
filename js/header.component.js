@@ -182,6 +182,10 @@ class HeaderComponent extends HTMLElement {
         .menu__link--number {
           display: unset;
         }
+
+      }
+
+      @media screen and (min-width: 1339px) {
         .line {
           background-color: #979797;
           width: 100%;
