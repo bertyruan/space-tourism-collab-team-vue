@@ -82,102 +82,102 @@ class HeaderComponent extends HTMLElement {
       }
 
 
-    @media screen and (min-width: 768px) {
-      .header__container {
-        --w-header-container: 38px;
-        --ml-header-container: auto;
-        --mr-header-container: 0;
+      @media screen and (min-width: 768px) {
+        .header__container {
+          --w-header-container: 38px;
+          --ml-header-container: auto;
+          --mr-header-container: 0;
+        }
+
+        .header__logo {
+          width: 48px;
+          height: 48px;
+        }
+
+        .header__logo img {
+          width: 100%;
+          height: 100%;
+        }
+
+        .header__nav {
+          --top: 0;
+          height: 96px;
+          max-width: 450px;
+          background-color: rgba(255, 255, 255, 0.04);
+          backdrop-filter: blur(81.5485px);
+          display: flex;
+        }
+
+        .menu {
+          align-self: center;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-left: 48px;
+          margin-right: 48px;
+          margin-top: 0;
+          gap: 0;
+          align-items: center;
+          width: 100%;
+        }
+
+        .menu__item {
+          position: relative;
+        }
+
+        .menu__item::before {
+          position: absolute;
+          content: '';
+          height: 3px;
+          width: auto;
+          bottom: -38px;
+          background-color: var(--bgc-item);
+          left: 0;
+          right: 0;
+        }
+
+        .menu__item:hover::before {
+          --bgc-item: var(--color-white);
+        }
+
+        .menu__item--active::before {
+          --bgc-item: var(--color-white);
+        }
+
+        .menu__link {
+          font-size: 14px;
+          display: inline-block;
+        }
+
+        .menu__link--number {
+          display: none;
+        }
+
+        .header__button {
+          display: none;
+        }
       }
 
-      .header__logo {
-        width: 48px;
-        height: 48px;
-      }
+      @media screen and (min-width: 980px) {
+        .header {
+          --mt-header: 64px;
+        }
 
-      .header__logo img {
-        width: 100%;
-        height: 100%;
+        .header__nav {
+          --top: 40px;
+          max-width: 830px;
+        }
+        .menu {
+          margin-left: 123px;
+          margin-right: 165px;
+        }
+        .menu__link {
+          font-size: 16px;
+          display: grid;
+        }
+        .menu__link--number {
+          display: unset;
+        }
       }
-
-      .header__nav {
-        --top: 0;
-        height: 96px;
-        max-width: 450px;
-        background-color: rgba(255, 255, 255, 0.04);
-        backdrop-filter: blur(81.5485px);
-        display: flex;
-      }
-
-      .menu {
-        align-self: center;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-left: 48px;
-        margin-right: 48px;
-        margin-top: 0;
-        gap: 0;
-        align-items: center;
-        width: 100%;
-      }
-
-      .menu__item {
-        position: relative;
-      }
-
-      .menu__item::before {
-        position: absolute;
-        content: '';
-        height: 3px;
-        width: auto;
-        bottom: -38px;
-        background-color: var(--bgc-item);
-        left: 0;
-        right: 0;
-      }
-
-      .menu__item:hover::before {
-        --bgc-item: var(--color-white);
-      }
-
-      .menu__item--active::before {
-        --bgc-item: var(--color-white);
-      }
-
-      .menu__link {
-        font-size: 14px;
-        display: inline-block;
-      }
-
-      .menu__link--number {
-        display: none;
-      }
-
-      .header__button {
-        display: none;
-      }
-    }
-
-    @media screen and (min-width: 980px) {
-      .header {
-        --mt-header: 64px;
-      }
-
-      .header__nav {
-        --top: 40px;
-        max-width: 830px;
-      }
-      .menu {
-        margin-left: 123px;
-        margin-right: 165px;
-      }
-      .menu__link {
-        font-size: 16px;
-        display: grid;
-      }
-      .menu__link--number {
-        display: unset;
-      }
-    }
 
     `;
   }
@@ -190,6 +190,15 @@ class HeaderComponent extends HTMLElement {
       this.headerButton.classList.toggle("header__button--close");
       this.headerNav.classList.toggle("header__nav--hidden");
     });
+    this.activePage = window.location.pathname;
+    this.menuItems = this.shadowRoot.querySelectorAll(".menu__item");
+    this.menuItems.forEach((item) => {
+      this.menuLink = item.querySelector(".menu__link");
+      if (this.menuLink.href.includes(this.activePage)) {
+        item.classList.add("menu__item--active");
+      }
+    });
+    // console.log(this.menuLink.link.includes(this.activePage));
   }
 
   render() {
@@ -208,7 +217,7 @@ class HeaderComponent extends HTMLElement {
           </a>
           <nav class="header__nav">
             <ul class="header__menu menu">
-              <li class="menu__item menu__item--active">
+              <li class="menu__item">
                 <a class="menu__link" href="index.html">
                   <span class="menu__link--number">00</span>home
                 </a>
