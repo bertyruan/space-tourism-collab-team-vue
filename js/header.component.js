@@ -6,6 +6,11 @@ class HeaderComponent extends HTMLElement {
 
   static get styles() {
     return /* css */ `
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+
       .header {
         margin-top: var(--mt-header, 24px);
       }
@@ -177,6 +182,15 @@ class HeaderComponent extends HTMLElement {
         .menu__link--number {
           display: unset;
         }
+        .line {
+          background-color: #979797;
+          width: 100%;
+          max-width: 473px;
+          height: 1px;
+          margin-left: 64px;
+          margin-right: auto;
+          z-index: 10;
+        }
       }
 
     `;
@@ -198,7 +212,6 @@ class HeaderComponent extends HTMLElement {
         item.classList.add("menu__item--active");
       }
     });
-    // console.log(this.menuLink.link.includes(this.activePage));
   }
 
   render() {
@@ -215,6 +228,7 @@ class HeaderComponent extends HTMLElement {
               height="40"
             />
           </a>
+          <div class="line"></div>
           <nav class="header__nav">
             <ul class="header__menu menu">
               <li class="menu__item">
