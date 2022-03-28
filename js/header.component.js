@@ -202,10 +202,9 @@ class HeaderComponent extends HTMLElement {
 
   getPathName() {
     const path = window.location.pathname;
-    if(path === '/')
-      return 'index.html';
-    
-    const paths = path.split('/');
+    if (path === "/") return "index.html";
+
+    const paths = path.split("/");
     return paths[paths.length - 1];
   }
 
@@ -256,7 +255,7 @@ class HeaderComponent extends HTMLElement {
                 </a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="crew/crew.html">
+                <a class="menu__link" href="crew.html">
                   <span class="menu__link--number">02</span>crew
                 </a>
               </li>
