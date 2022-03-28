@@ -200,6 +200,15 @@ class HeaderComponent extends HTMLElement {
     `;
   }
 
+  getPathName() {
+    const path = window.location.pathname;
+    if(path === '/')
+      return 'index.html';
+    
+    const paths = path.split('/');
+    return paths[paths.length - 1];
+  }
+
   connectedCallback() {
     this.render();
     this.headerButton = this.shadowRoot.querySelector(".header__button");
@@ -208,11 +217,11 @@ class HeaderComponent extends HTMLElement {
       this.headerButton.classList.toggle("header__button--close");
       this.headerNav.classList.toggle("header__nav--hidden");
     });
-    this.activePage = window.location.pathname;
+    this.activePage = this.getPathName();
     this.menuItems = this.shadowRoot.querySelectorAll(".menu__item");
     this.menuItems.forEach((item) => {
-      this.menuLink = item.querySelector(".menu__link");
-      if (this.menuLink.href.includes(this.activePage)) {
+      const menuLink = item.querySelector(".menu__link");
+      if (menuLink.href.includes(this.activePage)) {
         item.classList.add("menu__item--active");
       }
     });
