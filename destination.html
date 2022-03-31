@@ -12,36 +12,14 @@
       href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/styles.css" />
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="./css/destination-styles.css" />
 
     <title>Frontend Mentor | Space tourism website</title>
   </head>
   <body>
-    <header class="flex flex-space-between">
-      <!-- LOGO -->
-      <div class="logo-container flex-shrink-zero">
-        <img src="./assets/shared/logo.svg" alt="logo" class="logo-img" />
-      </div>
-
-      <!-- LINE -->
-      <div class="line"></div>
-      
-      <!-- HAMBURGER MENU -->
-      <div>
-        <button onClick="hamburgerClickHandler()" class="clear-btn hamburger p-24">
-          <img src="./assets/shared/icon-hamburger.svg" alt="menu" id="hamburger-icon" />
-        </button>
-      </div>
-      <nav id="nav-bar">
-        <ul class="nav-container flex-stretch my-0">
-          <li class="cursor-hand uppercase nav-item ff-barlow-condensed"><span class="nav-number ff-barlow-condensed">00</span>home</li>
-          <li class="cursor-hand uppercase nav-item ff-barlow-condensed nav-item-active"><span class="nav-number ff-barlow-condensed">01</span>destination</li>
-          <li class="cursor-hand uppercase nav-item ff-barlow-condensed"><span class="nav-number ff-barlow-condensed">02</span>crew</li>
-          <li class="cursor-hand uppercase nav-item ff-barlow-condensed"><span class="nav-number ff-barlow-condensed">03</span>technology</li>
-        </ul>
-      </nav>
-    </header>
+    <header-component></header-component>
     <main class="main-section">
       <div class="left-section">
         <!-- NUMBERED TITLE -->
@@ -64,17 +42,40 @@
       <div class="right-section">
         <!-- TABS -->
         <div class="mb-1 tabs">
-          <div class="tab-container flex flex-space-between ">
-            <div class="tab-item tab-item-first uppercase ff-barlow-condensed tab-item-active cursor-hand" onclick="changeTabHandler(1)">
+          <div class="tab-container flex flex-space-between">
+            <div
+              class="tab-item tab-item-first uppercase ff-barlow-condensed tab-item-active cursor-hand"
+              onclick="changeTabHandler(1)"
+            >
               moon
             </div>
-            <div class="tab-item uppercase ff-barlow-condensed cursor-hand"  onclick="changeTabHandler(2)">mars</div>
-            <div class="tab-item uppercase ff-barlow-condensed cursor-hand" onclick="changeTabHandler(3)">europa</div>
-            <div class="tab-item uppercase ff-barlow-condensed cursor-hand" onclick="changeTabHandler(4)">titan</div>
+            <div
+              class="tab-item uppercase ff-barlow-condensed cursor-hand"
+              onclick="changeTabHandler(2)"
+            >
+              mars
+            </div>
+            <div
+              class="tab-item uppercase ff-barlow-condensed cursor-hand"
+              onclick="changeTabHandler(3)"
+            >
+              europa
+            </div>
+            <div
+              class="tab-item uppercase ff-barlow-condensed cursor-hand"
+              onclick="changeTabHandler(4)"
+            >
+              titan
+            </div>
           </div>
         </div>
         <!-- PLANET TITLE -->
-        <div class="planet-title fs-56 ff-bellefair uppercase" id="tab-item-title">moon</div>
+        <div
+          class="planet-title fs-56 ff-bellefair uppercase"
+          id="tab-item-title"
+        >
+          moon
+        </div>
         <!-- PLANET DESCRIPTION -->
         <div
           class="planet-desc text-color-blue text-center mi-auto ff-barlow line-height-25 fs-15 letter-spacing-0"
@@ -83,29 +84,30 @@
           See our planet as you’ve never seen it before. A perfect relaxing trip
           away to help regain perspective and come back refreshed. While you’re
           there, take in some history by visiting the Luna 2 and Apollo 11
-          landing sites.
+          landing ss.
         </div>
         <!-- DIVIDER -->
         <div class="divider mb-2"></div>
         <!-- STATS -->
         <div class="stats-container">
-          <div class="stat-item stat-item-first ff-barlow-condensed uppercase mb-2">
-            <div class="stat-item-title text-color-blue">
-              avg. distance
-            </div>
+          <div
+            class="stat-item stat-item-first ff-barlow-condensed uppercase mb-2"
+          >
+            <div class="stat-item-title text-color-blue">avg. distance</div>
             <div class="stat-item-value ff-bellefair" id="stat-avg-dist">
               384,400 km
             </div>
           </div>
           <div class="stat-item ff-barlow-condensed uppercase mb-2">
-            <div class="stat-item-title text-color-blue">
-              est. travel time
+            <div class="stat-item-title text-color-blue">est. travel time</div>
+            <div class="stat-item-value ff-bellefair" id="stat-est-travel-time">
+              3 days
             </div>
-            <div class="stat-item-value ff-bellefair" id="stat-est-travel-time">3 days</div>
           </div>
         </div>
       </div>
     </main>
-    <script src="./js/destination.js" ></script>
+    <script src="./js/header.component.js"></script>
+    <script src="./js/destination.js"></script>
   </body>
 </html>

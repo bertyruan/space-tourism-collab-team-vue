@@ -6,6 +6,11 @@ class HeaderComponent extends HTMLElement {
 
   static get styles() {
     return /* css */ `
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+
       .header {
         margin-top: var(--mt-header, 24px);
       }
@@ -177,9 +182,30 @@ class HeaderComponent extends HTMLElement {
         .menu__link--number {
           display: unset;
         }
+
+      }
+
+      @media screen and (min-width: 1339px) {
+        .line {
+          background-color: #979797;
+          width: 100%;
+          max-width: 473px;
+          height: 1px;
+          margin-left: 64px;
+          margin-right: auto;
+          z-index: 10;
+        }
       }
 
     `;
+  }
+
+  getPathName() {
+    const path = window.location.pathname;
+    if (path === "/") return "index.html";
+
+    const paths = path.split("/");
+    return paths[paths.length - 1];
   }
 
   connectedCallback() {
@@ -190,15 +216,14 @@ class HeaderComponent extends HTMLElement {
       this.headerButton.classList.toggle("header__button--close");
       this.headerNav.classList.toggle("header__nav--hidden");
     });
-    this.activePage = window.location.pathname;
+    this.activePage = this.getPathName();
     this.menuItems = this.shadowRoot.querySelectorAll(".menu__item");
     this.menuItems.forEach((item) => {
-      this.menuLink = item.querySelector(".menu__link");
-      if (this.menuLink.href.includes(this.activePage)) {
+      const menuLink = item.querySelector(".menu__link");
+      if (menuLink.href.includes(this.activePage)) {
         item.classList.add("menu__item--active");
       }
     });
-    // console.log(this.menuLink.link.includes(this.activePage));
   }
 
   render() {
@@ -215,6 +240,7 @@ class HeaderComponent extends HTMLElement {
               height="40"
             />
           </a>
+          <div class="line"></div>
           <nav class="header__nav">
             <ul class="header__menu menu">
               <li class="menu__item">
@@ -229,7 +255,7 @@ class HeaderComponent extends HTMLElement {
                 </a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="crew/crew.html">
+                <a class="menu__link" href="crew.html">
                   <span class="menu__link--number">02</span>crew
                 </a>
               </li>
