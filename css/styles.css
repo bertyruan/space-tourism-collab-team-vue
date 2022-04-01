@@ -192,7 +192,7 @@ body {
 }
 
 /* desktop */
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 1440px) {
   .wrapper {
     --bgi-wrapper: url(../assets/home/background-home-desktop.jpg);
   }
