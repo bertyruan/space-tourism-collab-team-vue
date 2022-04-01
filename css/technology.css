@@ -53,6 +53,7 @@ p {
 /*--------------------Responsive/fluid image-----------------------------*/
 img {
   max-width: 100%;
+
   display: block;
 }
 
@@ -253,13 +254,13 @@ header {
   background-size: 100% 100%;
 }
 
-#capsule-image {
+.capsule-image {
   background: url("../assets/technology/image-space-capsule-landscape.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
-#space-port-image {
+.space-port-image {
   background: url("../assets/technology/image-spaceport-landscape.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -480,13 +481,13 @@ header {
     background-size: 100% 100%;
   }
 
-  #capsule-image {
+  .capsule-image {
     background: url("../assets/technology/image-space-capsule-portrait.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
 
-  #space-port-image {
+  .space-port-image {
     background: url("../assets/technology/image-spaceport-portrait.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;

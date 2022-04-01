@@ -1,5 +1,7 @@
 let data = [];
 
+// 1 - space-port-image
+// 2 - capsule-image 
 // ELEMENTS REFERENCE
 const title = document.querySelector("#title");
 const description = document.querySelector("#description");
@@ -28,7 +30,12 @@ function tabClickHandler( tabIndex ) {
 
 function changeTabContent() {
     title.innerHTML = data[selectedTabIndex].name;
-    image.style.backgroundImage = `url(${data[selectedTabIndex].images.landscape})`;
+    if( window.innerWidth <= 768 ) {
+        image.style.backgroundImage = `url(${data[selectedTabIndex].images.landscape})`;
+    } else {
+        image.style.backgroundImage = `url(${data[selectedTabIndex].images.portrait})`;
+    }
     image.style.backgroundSize = "100% 100%";
+
     description.innerHTML = data[selectedTabIndex].description;
 }
