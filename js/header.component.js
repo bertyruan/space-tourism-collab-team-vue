@@ -185,7 +185,7 @@ class HeaderComponent extends HTMLElement {
 
       }
 
-      @media screen and (min-width: 1339px) {
+      @media screen and (min-width: 1440px) {
         .line {
           background-color: #979797;
           width: 100%;
