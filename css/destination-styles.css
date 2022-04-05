@@ -42,8 +42,6 @@ html {
   width: 100%;
 }
 
-
-
 .main-section {
  display: flex;
   flex-direction: column;
@@ -79,6 +77,11 @@ main {
   letter-spacing: 2.7px;
   margin-bottom: 2rem;
   /* 32px */
+}
+
+.second-heading span{
+  font-weight: 700;
+  opacity: 0.25;
 }
 
 .numbered-title-container {
@@ -339,6 +342,7 @@ main {
   /*0 0 97px 0*/
   --fs-500: 1.75rem;
   /*28px*/
+  font-size: var(--fs-500);
   line-height: 33.6px;
   letter-spacing: 4.72px;
 }
@@ -427,4 +431,7 @@ main {
   }
 
 }
+
+
+
 

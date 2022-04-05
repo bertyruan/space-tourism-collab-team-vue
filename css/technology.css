@@ -457,6 +457,7 @@ main {
       /*0 0 26px 166.5px*/
       --fs-500: 1.75rem;
       /*28px*/
+      font-size: var(--fs-500);
       line-height: 33.6px;
       letter-spacing: 4.72px;
     }
