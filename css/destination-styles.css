@@ -42,76 +42,7 @@ html {
   width: 100%;
 }
 
-header {
-  position: relative;
-}
 
-.hamburger {
-  position: relative;
-  z-index: 100;
-}
-
-.logo-container {
-  padding: 1.5rem;
-}
-
-.logo-img {
-  height: 40px;
-  width: 40px;
-}
-
-.line {
-  display: none;
-  height: 1px;
-  background-color: white;
-}
-
-nav {
-  position: fixed;
-  display: inline;
-  top: 0;
-  right: -100%;
-}
-
-.nav-active {
-  right: 0;
-  animation: slideIn 0.5s ease-in;
-}
-
-
-.nav-container {
-  
-  width: 254px;
-  height: 100vh;
-  display: flex;
-  align-items: flex-start;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(81.5485px);
-  flex-direction: column;
-  padding-top: 7.375rem;
-}
-
-.nav-item {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  align-items: center;
-  justify-content: start;
-  padding-block: 1rem;
-  padding-inline: 0;
-}
-
-.nav-number{
-  margin-right: 0.625rem;
-}
-
-.nav-number {
-  display: block;
-}
-
-.nav-item-active {
-  border-right: 4px solid white;
-}
 
 .main-section {
   display: flex;
