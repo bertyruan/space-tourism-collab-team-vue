@@ -181,19 +181,21 @@ select {
 }
 /* -------------------body set up--------------------------*/
 body {
-  background: url("../assets/technology/background-technology-mobile.jpg");
-  background-color: hsl(var(--clr-dark));
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 1px solid black;
-  min-height: 100vh;
-  color: hsl(var(--clr-white));
-  font-size: var(--fs-400);
-  font-family: var(--ff-normal);
-  line-height: 1.5;
+background: url("../assets/technology/background-technology-mobile.jpg");
+background-color: hsl(var(--clr-dark));
+background-repeat: no-repeat;
+background-size: cover;
+min-height: 100vh;
+color: hsl(var(--clr-white));
+font-size: var(--fs-400);
+font-family: var(--ff-normal);
+line-height: 1.5;
+display: flex;
+flex-direction: column;
 }
-
+  
 main {
+ 
   margin-top: 30px;
 }
 
@@ -237,7 +239,7 @@ main {
 
   width: 40px;
   height: 40px;
-  
+
   text-decoration: none;
   color: hsl(var(--clr-white));
   border: 1px solid hsl(var(--clr-white));
@@ -361,13 +363,13 @@ main {
     margin-bottom: 1rem;
     /*16px*/
   }
-  
+
   .main-heading {
     font-size: 2.5rem;
     /* 40px */
     line-height: 45.84px;
   }
-  
+
   .main-text {
     margin: 0 9.68rem 6.0625rem;
     /*0 155px 97px*/
@@ -376,93 +378,90 @@ main {
     font-size: var(--fs-200);
     /* 16px */
   }
-  
+
   .main-text strong {
     display: inline;
   }
-  }
-  
-  @media screen and (min-width: 1440px) {
-    body {
-      background: url(../assets/technology/background-technology-desktop.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-  
-  
-    main {
-      margin-top: 102px;
-      display: grid;
-      justify-content: start;
-      grid-template-columns: 1fr auto;
-      gap: 0 156px;
-    }
+}
 
-    #page-image {
-      margin-bottom: 0;
-    }
-  
-    .container {
-      justify-self: center;
-      display: flex;
-      gap: 80px;
-      align-items: flex-start;
-      width: 637px;
-      margin-top: 137px;
-      margin-left: 165px;
-      grid-row: 2;
-    }
-  
-    .second-heading {
-      grid-column: 1 / -1;
-      margin: 0 0 1.625rem 10.40625rem;
-      /*0 0 26px 166.5px*/
-      --fs-500: 1.75rem;
-      /*28px*/
-      font-size: var(--fs-500);
-      line-height: 33.6px;
-      letter-spacing: 4.72px;
-    }
-  
-    .number-links {
-      margin-bottom: 0;
-      gap: 2rem;
-    }
-  
-    .link {
-      --fs-600: 2rem;
-      /*32px*/
-      letter-spacing: 2px;
-      width: 80px;
-      height: 80px;
-    }
-  
-    .secondary-text {
-      margin-bottom: 0.6875rem;
-      /*11px*/
-      text-align: left;
-    }
-  
-    .main-heading {
-      font-size: var(--fs-700);
-      line-height: 64.18px;
-      margin-bottom: 17px;
-      text-align: left;
-    }
-  
-    .main-text {
-      text-align: left;
-      margin: 0 0 246px 0;
-      line-height: 2rem;
-      /*32px*/
-      font-size: var(--fs-300);
-    }
-  
-    .main-text strong {
-      display: inline;
-    }
+@media screen and (min-width: 1440px) {
+  body {
+    background: url(../assets/technology/background-technology-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
-  
 
- 
+  main {
+    margin-top: 102px;
+    display: grid;
+    justify-content: start;
+    grid-template-columns: 1fr auto;
+    gap: 0 156px;
+  }
+
+  #page-image {
+    margin-bottom: 0;
+  }
+
+  .container {
+    justify-self: center;
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+    width: 637px;
+    margin-top: 137px;
+    margin-left: 165px;
+    grid-row: 2;
+  }
+
+  .second-heading {
+    grid-column: 1 / -1;
+    margin: 0 0 1.625rem 10.40625rem;
+    /*0 0 26px 166.5px*/
+    --fs-500: 1.75rem;
+    /*28px*/
+    font-size: var(--fs-500);
+    line-height: 33.6px;
+    letter-spacing: 4.72px;
+  }
+
+  .number-links {
+    margin-bottom: 0;
+    gap: 2rem;
+  }
+
+  .link {
+    --fs-600: 2rem;
+    /*32px*/
+    letter-spacing: 2px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .secondary-text {
+    margin-bottom: 0.6875rem;
+    /*11px*/
+    text-align: left;
+  }
+
+  .main-heading {
+    font-size: var(--fs-700);
+    line-height: 64.18px;
+    margin-bottom: 17px;
+    text-align: left;
+  }
+
+  .main-text {
+    text-align: left;
+    margin: 0 0 246px 0;
+    line-height: 2rem;
+    /*32px*/
+    font-size: var(--fs-300);
+  }
+
+  .main-text strong {
+    display: inline;
+  }
+}
+
