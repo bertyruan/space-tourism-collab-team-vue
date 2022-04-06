@@ -246,6 +246,14 @@ main {
   font-size: var(--fs-200);
 }
 
+.link.two {
+  padding-left: 2px;
+}
+
+.link.three {
+  padding-left: 4px;
+}
+
 .link:hover {
   border-width: 1.5px;
 }
