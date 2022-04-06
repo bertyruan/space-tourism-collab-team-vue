@@ -260,7 +260,7 @@ class HeaderComponent extends HTMLElement {
                 </a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="technology-vehicle.html">
+                <a class="menu__link" href="technology.html">
                   <span class="menu__link--number">03</span>technology
                 </a>
               </li>
