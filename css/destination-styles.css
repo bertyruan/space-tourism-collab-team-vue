@@ -42,79 +42,8 @@ html {
   width: 100%;
 }
 
-header {
-  position: relative;
-}
-
-.hamburger {
-  position: relative;
-  z-index: 100;
-}
-
-.logo-container {
-  padding: 1.5rem;
-}
-
-.logo-img {
-  height: 40px;
-  width: 40px;
-}
-
-.line {
-  display: none;
-  height: 1px;
-  background-color: white;
-}
-
-nav {
-  position: fixed;
-  display: inline;
-  top: 0;
-  right: -100%;
-}
-
-.nav-active {
-  right: 0;
-  animation: slideIn 0.5s ease-in;
-}
-
-
-.nav-container {
-  
-  width: 254px;
-  height: 100vh;
-  display: flex;
-  align-items: flex-start;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(81.5485px);
-  flex-direction: column;
-  padding-top: 7.375rem;
-}
-
-.nav-item {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  align-items: center;
-  justify-content: start;
-  padding-block: 1rem;
-  padding-inline: 0;
-}
-
-.nav-number{
-  margin-right: 0.625rem;
-}
-
-.nav-number {
-  display: block;
-}
-
-.nav-item-active {
-  border-right: 4px solid white;
-}
-
 .main-section {
-  display: flex;
+ display: flex;
   flex-direction: column;
 }
 
@@ -126,6 +55,33 @@ nav {
 
 .planet-title {
   text-align: center;
+}
+
+main {
+  margin-top: 24px;
+}
+
+.second-heading {
+  margin-top: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-family: var(--ff-cond);
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: var(--fs-200);
+  line-height: 19.2px;
+  letter-spacing: 2.7px;
+  margin-bottom: 2rem;
+  /* 32px */
+}
+
+.second-heading span{
+  font-weight: 700;
+  opacity: 0.25;
 }
 
 .numbered-title-container {
@@ -327,69 +283,19 @@ nav {
     background-size: cover;
   }
 
-  header {
-    margin-bottom: 2.5rem;;
-  }
-
-  .logo-container {
-    padding: 0;
-    padding-left: 1.5rem;
-  }
-
-  .logo-img {
-    width: 48px;
-    height: 48px;
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-  nav {
-    display: block;
-    right: 0;
-    position: relative;
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(81.5485px);
-  }
-
-  .nav-item-active {
-    border: 0;
-    border-bottom: 3px solid white;
-  }
-
-  .nav-container {
-    position: relative;
-    padding-top: 0;
-    height: auto;
-    flex-direction: row;
-    width: auto;
-    padding-left: 7.6875rem;
+  main {
+    margin-top: 64px;
   }
   
-  .nav-item {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
-    padding-block: 2.25rem;
-    margin-right: 2.25rem;
-  }
-  
-  .nav-number{
-    display: none;
+  .second-heading {
+    justify-content: flex-start;
+    margin: 0 0 3.75rem 2.406rem;
+    /*0 0 60px 38.5px */
+    letter-spacing: 3.38px;
+    font-size: 20px;
+    line-height: 24px;
   }
 
-  .numbered-title-container {
-    text-align: left;
-    padding-left: 2.4rem;
-    margin-bottom: 3.75rem;
-  }
-
-  .numbered-title {
-    font-size: 1.25rem;
-  }
 
   .tab-item {
     margin-right: 2.1875rem;
@@ -427,54 +333,19 @@ nav {
     background-image: url('./../assets/destination/background-destination-desktop.jpg');
   }
 
-  header {
-    margin-bottom: 4.75rem;
-    padding-top: 2.5rem;
-  }
+main {
+  margin-top: 101px;
+}
 
-  .line {
-    display: block;
-    position: relative;
-    width: 70%;
-    z-index: 10;
-    right: -20px;
-  }
-
-  nav {
-    display: block;
-    position: relative;
-    right: 0;
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(81.5485px);
-  }
-
-  .nav-item {
-    margin-right: 3rem;
-    padding-block: 2.375rem;
-  }
-
-  .nav-item-active {
-    border-bottom: 3px solid white;
-  }
-
-  .nav-number {
-    display: inline;
-    font-weight: 700;
-    margin-right: 10px;
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-  .numbered-title {
-    font-size: 1.75rem;
-  }
-
-  .numbered-title-container {
-    text-align: left;
-    margin-bottom: 4.75rem;
-  }
+.second-heading {
+  margin: 0 0 6.0625rem 0;
+  /*0 0 97px 0*/
+  --fs-500: 1.75rem;
+  /*28px*/
+  font-size: var(--fs-500);
+  line-height: 33.6px;
+  letter-spacing: 4.72px;
+}
 
   .planet-img {
     width: 445px;
@@ -560,4 +431,7 @@ nav {
   }
 
 }
+
+
+
 

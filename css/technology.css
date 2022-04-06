@@ -103,9 +103,11 @@ select {
 .bg-dark {
   background-color: hsl(var(--clr-dark));
 }
+
 .bg-light {
   background-color: hsl(var(--clr-light));
 }
+
 .bg-white {
   background-color: hsl(var(--clr-white));
 }
@@ -191,40 +193,8 @@ body {
   line-height: 1.5;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 1.5rem; /* 24px */
-}
-
-.logo {
-  width: 40px;
-  height: 40px;
-}
-
-.menu {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem; /*32px*/
-}
-
-.menu a {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: var(--ff-cond);
-  font-weight: 400;
-  font-size: var(--fs-200);
-  line-height: 19.2px;
-  letter-spacing: 2.7px;
-  color: hsl(var(--clr-white));
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.menu a .num {
-  font-weight: 700;
+main {
+  margin-top: 30px;
 }
 
 .second-heading {
@@ -238,7 +208,8 @@ header {
   font-size: var(--fs-200);
   line-height: 19.2px;
   letter-spacing: 2.7px;
-  margin-bottom: 2rem; /* 32px */
+  margin-bottom: 2rem;
+  /* 32px */
 }
 
 .second-heading span {
@@ -247,7 +218,8 @@ header {
 }
 
 .image-container {
-  margin-bottom: 2.125rem; /*34px */
+  margin-bottom: 2.125rem;
+  /*34px */
   height: 170px;
   background: url(../assets/technology/image-launch-vehicle-landscape.jpg);
   background-repeat: no-repeat;
@@ -277,7 +249,8 @@ header {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  margin-bottom: 1.625rem; /*26px */
+  margin-bottom: 1.625rem;
+  /*26px */
 }
 
 .number-links .link {
@@ -286,21 +259,25 @@ header {
   border: 1px solid hsl(var(--clr-white));
   border-radius: 50%;
   font-family: var(--ff-belle);
-  font-size: var(--fs-200); /* 16px */
-  padding: 0.6875rem 1rem 0.6875rem 1rem; /* 11px 16px 11px 16px*/
+  font-size: var(--fs-200);
+  /* 16px */
+  padding: 0.6875rem 1rem 0.6875rem 1rem;
+  /* 11px 16px 11px 16px*/
   line-height: 18.34px;
 }
 
 .secondary-text {
   text-transform: uppercase;
   font-family: var(--ff-cond);
-  font-size: var(--fs-100); /*14px */
+  font-size: var(--fs-100);
+  /*14px */
   font-weight: 400;
   line-height: 16.8px;
   letter-spacing: 2.36px;
   color: hsl(231, 90%, 88%);
   text-align: center;
-  margin-bottom: 0.5625rem; /* 9px */
+  margin-bottom: 0.5625rem;
+  /* 9px */
 }
 
 .main-heading {
@@ -308,19 +285,24 @@ header {
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
-  font-size: var(--fs-400); /* 24px */
+  font-size: var(--fs-400);
+  /* 24px */
   line-height: 27.5px;
-  margin-bottom: 1rem; /* 16px */
+  margin-bottom: 1rem;
+  /* 16px */
 }
 
 .main-text {
-  margin: 0 1.5rem 3.5rem 1.5rem; /* 0 24px 56px 24px*/
+  margin: 0 1.5rem 3.5rem 1.5rem;
+  /* 0 24px 56px 24px*/
   color: #d0d6f9;
   font-family: var(--ff-normal);
   font-weight: 400;
-  font-size: var(--fs-150); /* 15px */
+  font-size: var(--fs-150);
+  /* 15px */
   text-align: center;
-  line-height: 1.5625rem; /*25px */
+  line-height: 1.5625rem;
+  /*25px */
 }
 
 .main-text strong {
@@ -330,6 +312,7 @@ header {
 
 /* -------------------------------***accesibility *** remove animations for people who've turned them off---------------------------- */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -348,212 +331,183 @@ header {
     background-size: cover;
   }
 
-  header {
-    padding: 0;
-    margin-bottom: 40px;
-  }
-
-  .logo {
-    height: 48px;
-    width: 48px;
-    margin: 24px 0 0 39px;
-  }
-
-  .menu {
-    padding: 2.4375rem 2.875rem 2.4375rem 3rem; /*39px 46px 39px 48px*/
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 2.3125rem; /*37px*/
-    background: rgba(255, 255, 255, 0.04);
-  }
-
-  .menu a {
-    text-decoration: none;
-    font-family: var(--ff-cond);
-    font-weight: 400;
-    font-size: var(--fs-100);
-    line-height: 16.8px;
-    letter-spacing: 2.36px;
-    color: hsl(var(--clr-white));
-    display: flex;
-    gap: 12px;
-  }
-
-  .menu a .num {
-    display: none;
+  main {
+    margin-top: 66px;
   }
 
   .second-heading {
     justify-content: flex-start;
-    margin: 0 0 3.75rem 2.406rem; /*0 0 60px 38.5px */
+    margin: 0 0 3.75rem 2.406rem;
+    /*0 0 60px 38.5px */
     letter-spacing: 3.38px;
     font-size: 20px;
     line-height: 24px;
   }
-
+  
   .image-container {
     height: 310px;
-    margin-bottom: 3.5rem; /*56px */
+    margin-bottom: 3.5rem;
+    /*56px */
   }
-
+  
   .number-links {
-    margin-bottom: 2.75rem; /*44px */
+    margin-bottom: 2.75rem;
+    /*44px */
   }
-
+  
   .number-links .link {
-    font-size: var(--fs-400); /* 16px */
+    font-size: var(--fs-400);
+    /* 16px */
     line-height: 27.5px;
     letter-spacing: 1.5px;
   }
-
+  
   .link.one,
   .link.two {
-    padding: 1rem 1.5rem; /*16px 24px*/
+    padding: 1rem 1.5rem;
+    /*16px 24px*/
   }
-
+  
   .link.three {
     padding: 0.9375rem 1.4375rem;
   }
-
+  
   .secondary-text {
-    font-size: var(--fs-200); /*16px */
+    font-size: var(--fs-200);
+    /*16px */
     line-height: 19.2px;
     letter-spacing: 2.7px;
-    margin-bottom: 1rem; /*16px*/
-  }
-
-  .main-heading {
-    font-size: 2.5rem; /* 40px */
-    line-height: 45.84px;
-  }
-
-  .main-text {
-    margin: 0 9.68rem 6.0625rem; /*0 155px 97px*/
-    line-height: 1.75rem; /*28px */
-    font-size: var(--fs-200); /* 16px */
-  }
-
-  .main-text strong {
-    display: inline;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  body {
-    background: url(../assets/technology/background-technology-desktop.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  header {
-    padding: 40px 0 0 0;
-    margin-bottom: 4.75rem; /*76px*/
-  }
-
-  .menu {
-    padding: 2.4375rem 10.3125rem 2.375rem 7.6875rem; /*  39px 165px 38px 123px; */
-    gap: 3rem; /*48px*/
-  }
-
-  .menu a .num {
-    display: inline;
-  }
-
-  .logo {
-    margin-left: 55px;
-  }
-
-  main {
-    display: grid;
-    justify-content: start;
-    grid-template-columns: 1fr auto;
-    gap: 0 156px;
-  }
-
-  .image-container {
-    grid-column: 2;
-    height: 527px;
-    width: 483px;
-    margin-bottom: 3.5rem; /*56px */
-    background: url(../assets/technology/image-launch-vehicle-portrait.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-  }
-
-  .capsule-image {
-    background: url("../assets/technology/image-space-capsule-portrait.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-  }
-
-  .space-port-image {
-    background: url("../assets/technology/image-spaceport-portrait.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-  }
-
-  .container {
-    justify-self: center;
-    display: flex;
-    gap: 80px;
-    align-items: flex-start;
-    width: 637px;
-    margin-top: 137px;
-    margin-left: 165px;
-    grid-row: 2;
+    margin-bottom: 1rem;
+    /*16px*/
   }
   
-   .second-heading {
-    grid-column: 1 / -1;
-    margin: 0 0 1.625rem 10.40625rem; /*0 0 26px 166.5px*/
-    --fs-500: 1.75rem; /*28px*/
-    line-height: 33.6px;
-    letter-spacing: 4.72px;
-  }
-
-  .number-links .link {
-    font-size: var(--fs-400); /* 16px */
-    line-height: 27.5px;
-    letter-spacing: 1.5px;
-  }
-
-  .number-links {
-    margin-bottom: 0;
-    gap: 2rem;
-  }
-
-  .number-links .link {
-    --fs-600: 2rem; /*32px*/
-    letter-spacing: 2px;
-    padding: 22px 35px 21px 34px;
-    line-height: 36.67px;
-  }
-
-  .secondary-text {
-    margin-bottom: 0.6875rem; /*11px*/
-    text-align: left;
-  }
-
   .main-heading {
-    font-size: var(--fs-700);
-    line-height: 64.18px;
-    margin-bottom: 17px;
-    text-align: left;
+    font-size: 2.5rem;
+    /* 40px */
+    line-height: 45.84px;
   }
-
+  
   .main-text {
-    text-align: left;
-    margin: 0 0 246px 0;
-    line-height: 2rem; /*32px*/
-    font-size: var(--fs-300);
+    margin: 0 9.68rem 6.0625rem;
+    /*0 155px 97px*/
+    line-height: 1.75rem;
+    /*28px */
+    font-size: var(--fs-200);
+    /* 16px */
   }
-
+  
   .main-text strong {
     display: inline;
   }
-}
+  }
+  
+  @media screen and (min-width: 1440px) {
+    body {
+      background: url(../assets/technology/background-technology-desktop.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  
+  
+    main {
+      margin-top: 102px;
+      display: grid;
+      justify-content: start;
+      grid-template-columns: 1fr auto;
+      gap: 0 156px;
+    }
+  
+    .image-container {
+      grid-column: 2;
+      height: 527px;
+      width: 483px;
+      margin-bottom: 3.5rem;
+      /*56px */
+      background: url(../assets/technology/image-launch-vehicle-portrait.jpg);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+  
+    .capsule-image {
+      background: url("../assets/technology/image-space-capsule-portrait.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+  
+    .space-port-image {
+      background: url("../assets/technology/image-spaceport-portrait.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+  
+    .container {
+      justify-self: center;
+      display: flex;
+      gap: 80px;
+      align-items: flex-start;
+      width: 637px;
+      margin-top: 137px;
+      margin-left: 165px;
+      grid-row: 2;
+    }
+  
+    .second-heading {
+      grid-column: 1 / -1;
+      margin: 0 0 1.625rem 10.40625rem;
+      /*0 0 26px 166.5px*/
+      --fs-500: 1.75rem;
+      /*28px*/
+      font-size: var(--fs-500);
+      line-height: 33.6px;
+      letter-spacing: 4.72px;
+    }
+  
+    .number-links .link {
+      font-size: var(--fs-400);
+      /* 16px */
+      line-height: 27.5px;
+      letter-spacing: 1.5px;
+    }
+  
+    .number-links {
+      margin-bottom: 0;
+      gap: 2rem;
+    }
+  
+    .number-links .link {
+      --fs-600: 2rem;
+      /*32px*/
+      letter-spacing: 2px;
+      padding: 22px 35px 21px 34px;
+      line-height: 36.67px;
+    }
+  
+    .secondary-text {
+      margin-bottom: 0.6875rem;
+      /*11px*/
+      text-align: left;
+    }
+  
+    .main-heading {
+      font-size: var(--fs-700);
+      line-height: 64.18px;
+      margin-bottom: 17px;
+      text-align: left;
+    }
+  
+    .main-text {
+      text-align: left;
+      margin: 0 0 246px 0;
+      line-height: 2rem;
+      /*32px*/
+      font-size: var(--fs-300);
+    }
+  
+    .main-text strong {
+      display: inline;
+    }
+  }
 
-
+  
 
  
