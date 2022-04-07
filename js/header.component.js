@@ -188,8 +188,7 @@ class HeaderComponent extends HTMLElement {
       @media screen and (min-width: 1440px) {
         .line {
           background-color: #979797;
-          width: 100%;
-          max-width: 473px;
+          width: calc(100% - 910px);
           height: 1px;
           margin-left: 64px;
           margin-right: auto;
