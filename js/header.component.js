@@ -37,7 +37,10 @@ class HeaderComponent extends HTMLElement {
         right: 0;
         background-color: rgba(255, 255, 255, 0.04);
         backdrop-filter: blur(81.5485px);
+        backdrop-filter: blur(0px);  
+        background-color: #262a36;
         z-index: 3;
+        backdrop-filter: blur(81.5485px);
       }
 
       .header__nav--hidden {
