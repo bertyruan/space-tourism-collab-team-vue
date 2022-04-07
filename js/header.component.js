@@ -28,16 +28,13 @@ class HeaderComponent extends HTMLElement {
       }
 
       .header__nav {
-        position: absolute;
+      position: absolute;
         width: 100%;
         max-width: 250px;
         height: 100%;
         top: var(--top, -100%);
         bottom: 0;
         right: 0;
-        background-color: rgba(255, 255, 255, 0.04);
-        backdrop-filter: blur(81.5485px);
-        backdrop-filter: blur(0px);  
         background-color: #262a36;
         z-index: 3;
         backdrop-filter: blur(81.5485px);
@@ -277,3 +274,5 @@ class HeaderComponent extends HTMLElement {
 }
 
 customElements.define("header-component", HeaderComponent);
+
+        
