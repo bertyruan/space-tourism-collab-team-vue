@@ -35,9 +35,15 @@ class HeaderComponent extends HTMLElement {
         top: var(--top, -100%);
         bottom: 0;
         right: 0;
-        background-color: rgba(255, 255, 255, 0.04);
-        backdrop-filter: blur(81.5485px);
+        background-color: #262a36;
         z-index: 3;
+      }
+      
+      @supports(backdrop-filter: none) {
+        .backdrop {
+          backdrop-filter: blur(81.5485px);
+          background-color: rgba(255, 255, 255, 0.04);
+        }
       }
 
       .header__nav--hidden {
@@ -109,8 +115,13 @@ class HeaderComponent extends HTMLElement {
           height: 96px;
           max-width: 450px;
           background-color: rgba(255, 255, 255, 0.04);
-          backdrop-filter: blur(81.5485px);
           display: flex;
+        }
+
+        @supports(backdrop-filter: none) {
+          .backdrop {
+            backdrop-filter: none;
+          }
         }
 
         .menu {
@@ -240,7 +251,7 @@ class HeaderComponent extends HTMLElement {
             />
           </a>
           <div class="line"></div>
-          <nav class="header__nav">
+          <nav class="backdrop header__nav">
             <ul class="header__menu menu">
               <li class="menu__item">
                 <a class="menu__link" href="index.html">
@@ -274,3 +285,5 @@ class HeaderComponent extends HTMLElement {
 }
 
 customElements.define("header-component", HeaderComponent);
+
+        
